@@ -1,26 +1,16 @@
-import { useState, useEffect } from "react";
-import { onSnapshot, collection } from "firebase/firestore";
-import { db } from "./services/database";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Login } from "./pages/Login";
+import { Chats } from "./pages/Chats";
 
 export const App = () => {
-  const [chatsData, setChatsData] = useState([]);
-
-  useEffect(() => {
-    const unsuscribeChats = onSnapshot(collection(db, "Chat"), (snapshot) => {
-      const chats = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      setChatsData(chats);
-    });
-
-    return () => {
-      unsuscribeChats();
-    };
-  }, []);
-
   return (
-    <div>
-      {chatsData.map((chat) => (
-        <div key={chat.id}>{chat.id}</div>
-      ))}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/chats" element={<Chats />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
