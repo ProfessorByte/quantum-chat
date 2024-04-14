@@ -3,7 +3,6 @@ import { Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Login } from "./pages/Login";
 import { Chats } from "./pages/Chats";
-import "tailwindcss/tailwind.css";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { useAuth } from "./hooks/useAuth";
 
