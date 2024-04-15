@@ -114,10 +114,15 @@ export const Chats = () => {
         ...doc.data(),
       }));
       dispatch({ type: SET_CHATS, payload: chats });
+      if (currentChat) {
+        setCurrentConversation(
+          chats.find((chat) => chat.phoneNumber === currentChat.phoneNumber)
+        );
+      }
     });
 
     return () => unsuscribe();
-  }, []);
+  }, [currentChat]);
 
   return (
     <div className="w-full h-screen bg-[#343541]">

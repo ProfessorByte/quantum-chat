@@ -9,7 +9,7 @@ export const Message = ({ sender, message, timestamp }) => {
   const [formattedDate, setFormattedDate] = useState("");
 
   useEffect(() => {
-    const date = new Date(Number(timestamp * 1000));
+    const date = new Date(timestamp * 1000);
 
     setFormattedDate(date.toLocaleString("es-ES"));
   }, [timestamp]);
