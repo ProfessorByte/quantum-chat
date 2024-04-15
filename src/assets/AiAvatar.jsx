@@ -1,0 +1,112 @@
+export const AiAvatar = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMinYMid"
+    viewBox="0 0 40 40"
+    {...props}
+  >
+    <path
+      fill="#DDD"
+      d="M20.4 39.5h-.8c-10 0-18.1-8.2-18.1-18.1V16C1.5 7.5 8.5.5 17 .5h6.2c8.5 0 15.5 7 15.5 15.5v5.4c-.1 9.9-8.3 18.1-18.3 18.1z"
+    />
+    <path fill="#A0CEC7" d="M20.1 5.3v14.5H4.5v-8.3l3.9-5.3 6.8-3" />
+    <path fill="#FFF" d="M20.1 5.3v14.5h15.6v-8.3l-3.9-5.3-6.8-3" />
+    <path
+      fill="none"
+      stroke="#020202"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit={10}
+      strokeWidth={1.282}
+      d="m20.1 5.1-3.8-1.5c-.6-.5-1.4-.5-2.1-.2L8.8 6.1c-.4.1-.6.3-.9.6l-3.2 4.2c-.3.4-.5.9-.5 1.4v7.6H36v-7.6c0-.5-.2-1-.5-1.4l-3.2-4.2c-.2-.3-.5-.5-.8-.7l-5.4-2.6c-.7-.3-1.5-.3-2.1.2l-3.9 1.5z"
+    />
+    <circle
+      cx={12.9}
+      cy={26.5}
+      r={2.6}
+      fill="#A0CEC7"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={1.185}
+    />
+    <circle
+      cx={27.2}
+      cy={26.5}
+      r={2.6}
+      fill="#A0CEC7"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={1.185}
+    />
+    <circle
+      cx={20.1}
+      cy={14.4}
+      r={1.9}
+      fill="#FFF"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={1.025}
+    />
+    <path
+      fill="none"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={1.025}
+      d="M20.1 5.1v7.2"
+    />
+    <circle
+      cx={26}
+      cy={9.6}
+      r={1.5}
+      fill="none"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={0.996}
+    />
+    <circle
+      cx={31.1}
+      cy={13.9}
+      r={1.5}
+      fill="none"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={0.996}
+    />
+    <path
+      fill="none"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={0.83}
+      d="m28.9 5.3-2.2 3m5.7 4.9 3.1-1.4"
+    />
+    <circle
+      cx={14}
+      cy={9.6}
+      r={1.5}
+      fill="#FFF"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={0.996}
+    />
+    <circle
+      cx={9}
+      cy={13.9}
+      r={1.3}
+      fill="#FFF"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={0.83}
+    />
+    <path
+      fill="none"
+      stroke="#020202"
+      strokeMiterlimit={10}
+      strokeWidth={0.83}
+      d="m11.2 5.3 2.1 3m-8.8 3.5 3.2 1.4"
+    />
+    <path
+      fill="#020202"
+      d="M23.4 35.3h-6.7c-.4 0-.7-.3-.7-.7v-.2c0-.4.3-.7.7-.7h6.7c.4 0 .7.3.7.7v.2c0 .4-.3.7-.7.7z"
+    />
+  </svg>
+);

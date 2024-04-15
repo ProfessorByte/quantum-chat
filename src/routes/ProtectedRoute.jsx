@@ -1,5 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 import PropTypes from "prop-types";
+import { SpinnerIcon } from "../assets/Icons";
 
 export const ProtectedRoute = ({
   children,
@@ -9,7 +10,11 @@ export const ProtectedRoute = ({
   redirectTo,
 }) => {
   if (loading) {
-    return <div>Cargando...</div>;
+    return (
+      <div className="flex items-center justify-center mt-24">
+        <SpinnerIcon />
+      </div>
+    );
   }
 
   if ((isForUser && !user) || (!isForUser && user)) {

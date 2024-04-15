@@ -1,77 +1,18 @@
-.container {
-  display: flex;
-  min-height: 100vh;
+.appChats {
+  @apply relative w-full h-screen bg-gray-500;
+}
+
+.navTop {
+  @apply sticky top-0 z-10 flex items-center pt-1 pl-1 text-gray-200 bg-gray-800 border-b border-white/20 sm:pl-3 md:hidden;
+}
+
+.openSideBar {
+  @apply -ml-0.5 -mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:hover:text-white;
 }
 
 .sideBar {
-  flex: 3;
-  background-color: white;
-  margin: 18px;
-  gap: 9px;
-  border-radius: 15px;
+  @apply h-screen;
 }
 
-.main {
-  flex: 12;
-  height: 100vh;
-}
-
-.brand {
-  font-family: "Michroma", sans-serif;
-  display: block;
-  margin-top: 18px;
-  @apply text-2xl text-center;
-}
-
-.search {
-  @apply flex flex-row my-6 items-center gap-2 px-3;
-}
-
-.search input {
-  width: 100%;
-  @apply p-2 border-2 border-green-500 rounded-3xl;
-}
-
-.search img {
-  @apply bg-green-500 rounded-full p-2 size-10;
-}
-
-.conversations {
-  @apply flex flex-col gap-3;
-}
-
-.conversations span {
-  width: 100%;
-  @apply text-center text-sm text-gray-500 py-3 border-y-2 border-gray-300;
-}
-
-.conversations .buttonMainContent {
-  width: 100%;
-  @apply flex flex-row items-center gap-2 text-left p-3 hover:text-green-500;
-}
-
-.emptyHistoryLogo {
-  @apply flex flex-col items-center justify-center gap-1 mt-9;
-}
-
-.emptyHistoryLogo img {
-  width: 60px;
-}
-
-.containerConversation {
-  max-height: 100vh;
-  /* overflow-y: auto; */
-  @apply flex flex-col px-24 mt-16;
-}
-
-.userMessage {
-  @apply bg-gray-300 p-3 rounded-md;
-}
-
-.botMessage {
-  @apply bg-green-300 self-end p-3 rounded-md;
-}
-
-.conversation {
-  @apply flex flex-col gap-9 items-start;
+.topSideBar {
 }
