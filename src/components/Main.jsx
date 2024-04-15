@@ -12,6 +12,7 @@ export const Main = ({ currentConversation }) => {
               key={message.timestamp}
               sender={message.type}
               message={message.message}
+              timestamp={message.timestamp}
             />
           ))
         ) : (
