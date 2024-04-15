@@ -8,12 +8,14 @@ import {
 import PropTypes from "prop-types";
 import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
+import { SearchBar } from "./SearchBar";
 
 export const Aside = ({
   chats,
   isLoading,
   currentConversation,
   setCurrentConversation,
+  filterFunction,
 }) => {
   const [openSidebar, setOpenSidebar] = useState(true);
   const { user, logout } = useAuth();
@@ -40,7 +42,11 @@ export const Aside = ({
         }`}
       >
         <nav className="flex flex-col flex-1 h-full p-2 space-y-1">
-          <div className="flex-col flex-1 overflow-y-auto border-b border-white/20">
+          <div className="flex flex-col py-1 items-center justify-center text-center text-gray-100">
+            <span className="font-[Michroma] text-xl">Quantum Chat</span>
+            <SearchBar filterFunction={filterFunction} />
+          </div>
+          <div className="flex-col flex-1 overflow-y-auto border-b border-t py-1 border-white/20">
             <div className="flex flex-col gap-2 text-sm text-gray-100">
               {isLoading ? (
                 <div className="mx-auto mt-6">
@@ -108,4 +114,5 @@ Aside.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   currentConversation: PropTypes.object,
   setCurrentConversation: PropTypes.func.isRequired,
+  filterFunction: PropTypes.func.isRequired,
 };

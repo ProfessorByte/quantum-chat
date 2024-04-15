@@ -94,11 +94,17 @@ const chatsReducer = (state = initialState, action) => {
 };
 
 export const Chats = () => {
-  const [{ chats, filteredChats, isLoading, currentChat }, dispatch] =
-    useReducer(chatsReducer, initialState);
+  const [{ filteredChats, isLoading, currentChat }, dispatch] = useReducer(
+    chatsReducer,
+    initialState
+  );
 
   const setCurrentConversation = (conversation) => {
     dispatch({ type: SET_CURRENT_CHAT, payload: conversation });
+  };
+
+  const searchChats = (search) => {
+    dispatch({ type: FILTER_CHATS, payload: search });
   };
 
   useEffect(() => {
@@ -120,6 +126,7 @@ export const Chats = () => {
         isLoading={isLoading}
         currentConversation={currentChat}
         setCurrentConversation={setCurrentConversation}
+        filterFunction={searchChats}
       />
       <Main currentConversation={currentChat} />
     </div>
